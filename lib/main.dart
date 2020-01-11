@@ -1,5 +1,6 @@
+import 'package:La_aplicacion/Curso1.dart';
 import 'package:flutter/material.dart';
-import 'Camara.dart';
+import 'Rest_API.dart';
 import 'Camara_1.dart';
 
 void main() => runApp(MyApp());
@@ -94,12 +95,24 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             RaisedButton(
-              child:Text('Fist Route'),
+              child:Text('Camera'),
               onPressed: (){
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => LandingScreen()),
                 );
+              },
+            ),
+            RaisedButton(
+              child: Text('Api'),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> Conexion()));
+              },
+            ),
+            RaisedButton(
+              child: Text('Curso'),
+              onPressed: (){
+                Navigator.push(context, MaterialPageRoute(builder: (context)=> MyCurse()));
               },
             ),
             Text(
